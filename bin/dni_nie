@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
+require 'dni_nie'
+
+args = ARGV.dup
+
+case args[0]
+ when ('letra' || 'control_letter' )
+  puts DniNie.letra args[1].dup
+ when ('dni' || 'random_dni')
+  puts DniNie.random_dni
+ when ('nie' || 'random_nie')
+  puts DniNie.get_random_nie
+ when ('validar' || 'validate')
+  puts DniNie.validar args[1].dup
+ else
+  
+   if  (/es_.*/.match(ENV["LANG"])) # detecta español en consola
+    puts <<EOS
+DniNie versión 0.3.3 - Software LGPL-3.0 
+Una gema Ruby para la verficación de documentos DNI/NIE 
+
+Uso:
+  dni_nie [parametro[número_documeto]]
+
+Parámetros posibles:
+  validar [número]          - valida números de identificación (DNI/NIE),  devuelve true or false
+  letra [número]            - retorna la letra de control del documento introducido 
+  dni                       - retorna una identificación DNI válida aleatoria
+  nie                       - retorna una identificación NIE válida aleatoria
+EOS
+   else
+    puts <<EOS
+
+DniNie 0.3.3 version - LGPL-3.0 software
+A Ruby gem to handle Spanish Identity Documents
+
+Usage:
+  dni_nie [parameter[document number]]
+
+Possible parameters are:
+  validate [number]         - validates given identification (DNI/NIE) number, returns true or false
+  control_letter [number]   - returns validation letter for given identification number 
+  random_dni                - returns a random valid DNI number
+  random_nie                - returns a random valid NIE number
+EOS
+     end
+end
