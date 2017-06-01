@@ -18,6 +18,7 @@ ratings:
   - "**.rb"
 exclude_paths:
 - test/
+- doc/
 ---
 2	engines:
 3	  csslint:
