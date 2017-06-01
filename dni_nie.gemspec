@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'dni_nie'
-  s.version     = '0.3.3'
-  s.date        = '2017-03-22'
+  s.version     = '0.3.7'
+  s.date        = '2017-06-01'
   s.summary     = "Utilidades para documentos oficiales DNI-NIE | Spanish official Id. tools"
   s.description = "Una gema para la verficación de documentos DNI/NIE | A gem to handle Spanish Identity Documents"
   s.authors     = ["L. Jacob Mariscal Fernández"]

@@ -15,7 +15,7 @@
 # LETRA | LETTER	N 	J 	Z 	S 	Q 	V 	H 	L 	C 	K 	E
 # X → 0 ,Y → 1, Z → 2
 # más información | more info DNI-NIE http://www.interior.gob.es/web/servicios-al-ciudadano/dni/calculo-del-digito-de-control-del-nif-nie (Spanish)
-# @version 0.3.3
+# @version 0.3.7
 # @author Luis Jacob Mariscal Fernández
 
 module DniNie
@@ -68,12 +68,16 @@ public
 def self.letra(num) # letra o digito  de control del DNI/NIE
     num = transform(num)
     #doc = '0' + doc if doc.size == 6
-    #a = 0
-    
+    #a = 0  
     CODIGO[(num.to_i % 23)].to_s
 end
 
+# Valida el documento de identificación dado  | Validate the entry id document.
+#
+# @param verifica si la entrada [Número|Cadena] es número de documento válido | check if entry [Number|String] is a valid document id.
+# @return [Boolean] indica si válida la entrada | the entry validation return (true/flase).
 def self.validate_doc(ci) # validar documento
+  raise ArgumentError, "Entrada errónea, número de identificación debe ser una cadena | Wrong entry, must be a String" unless ci.is_a? String
   dig = ci[-1]
   ci = ci[0..-2]
   ci = transform(ci)
@@ -83,12 +87,19 @@ def self.validate_doc(ci) # validar documento
   letra(ci) == dig.upcase # pone en Mayúsculas
 end
 
+# Genera el documento nacional de identidad aleatorio | Creates a random valid Spanish national id document.
+#
+# @param ninguno | none
+# @return [String] DNI aleatorio | random DNI document.
 def self.get_random_dni # genera dni aleatorio
     dni = rand(0..89999999).to_s # límite en 89 millones, no se sabe de mayor a la fecha
     dni += letra(dni)
     dni
 end
-
+# Genera un número de identificación del extranjero NIE aleaotorio | Creates a random valid Spanish foreigner id document.
+#
+# @param ninguno | none
+# @return [String] NIE aleatorio | random NIE document.
 def self.get_random_nie # genera nie aleatorio
     #nie = LETRA[(rand(0..2))] ++ rand(0..9_999_999).to_s #parece que siempre asigna millones
     nie = LETRA[(rand(0..2))] ++ rand(0..9999999).to_s
@@ -97,23 +108,8 @@ def self.get_random_nie # genera nie aleatorio
     nie += letra
     nie
 end
-#p get_random_dni  
-#p get_random_nie
-#p CODIGO[(79253302 % 23)].to_s
-#p transform(64798)
-#p transform('Z00019')
-#p transform('a01')
-#p transform(' _ 0a01')
-#p transform('9999792553302')
-#p letra(0)
-#p letra ('Y0760953') #not accept 0 first if is array int, thinks is octal number
-#p letra(1760953)
-#p validate_doc('79253302X')
-#p validate_doc('Y9253302B')
-#p validate_doc('1760953G')
-#p 014.trim
 
- class << self  # alias
+ class << self  # alias de métodos | methods alias
    alias_method :get_control_letter, :letra
    alias_method :control_letter, :get_control_letter
    alias_method :control_digit, :get_control_letter

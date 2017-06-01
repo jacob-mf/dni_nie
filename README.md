@@ -3,6 +3,9 @@
 
 Gema para validar/generar documentos de identidad de España | A gem to validate/generate Spanish Identity Documents
   https://rubygems.org/gems/dni_nie
+Inspirado y dedicado a Fernando Briano, por su proyecto http://picandocodigo.net/2013/validacion-de-la-cedula-de-identidad-uruguaya-en-ruby/ |
+Inspired and dedicated to Fernando Briano, and also to you and the Guadalinex users
+Dedicado también a ti y la comunidad de Guadalinex http://www.guadalinex.org/participa/foros/
 
 Instalación: | Install:
 
@@ -23,8 +26,9 @@ irb(main):004:0> DniNie.random_dni
  => "55428494N"
  ```
 
-Once the gem is installed in your system, you can also use 'dni_nie'
-from the command line:
+Una vez instalada la gema se puede usar directamente desde la línea de
+ comandos | Once the gem is installed in your system, you can also 
+use 'dni_nie' from the command line:
 
 ```bash
 $ gem install dni_nie

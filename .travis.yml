@@ -11,5 +11,5 @@ rvm:
   - rbx
 install: gem install minitest
 before_script:
-  - gem build ci_uy.gemspec
-- gem install ci_uy
+  - gem build dni_nie.gemspec
+- gem install dni_nie

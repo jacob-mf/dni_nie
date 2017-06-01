@@ -17,7 +17,7 @@ case args[0]
   
    if  (/es_.*/.match(ENV["LANG"])) # detecta español en consola
     puts <<EOS
-DniNie versión 0.3.3 - Software LGPL-3.0 
+DniNie versión 0.3.7 - Software LGPL-3.0 
 Una gema Ruby para la verficación de documentos DNI/NIE 
 
 Uso:

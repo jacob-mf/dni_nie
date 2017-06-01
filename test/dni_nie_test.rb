@@ -6,10 +6,10 @@ require 'dni_nie'
 
 describe DniNie do   # test module DniNie
   it 'debe devolver la letra de control válida | should return a valid control digit' do
-    ci = '1760953'
-    assert 'G', DniNie.get_control_letter(ci)
+    ci = '678989Y'
+    assert 'Y', DniNie.get_control_letter(ci)
 
-    ci = '79253302'
+    ci = '79297879'
     assert 'V', DniNie.control_digit(ci)
     
     doc = '0-0/011/'
@@ -17,12 +17,12 @@ describe DniNie do   # test module DniNie
   end
 
   it 'debe validar documentos oficiales | should validate official document id.' do
-    doc = '79253302V'
+    doc = '678989Y'
     assert DniNie.validate(doc)
   end
 
   it 'debe validar números que incluyan puntos o guiones | should validate numbers even when using dots and dashes' do
-     doc = '1760953-G'
+     doc = '678989-.Y'
     assert DniNie.validate_doc(doc)
  
      doc = '0-0/011/B'

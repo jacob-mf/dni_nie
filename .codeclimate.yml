@@ -1,0 +1,20 @@
+---
+2	engines:
+3	  csslint:
+4	    enabled: true
+5	  duplication:
+6	    enabled: true
+7	    config:
+8	      languages:
+9	      - ruby
+10	  eslint:
+11	    enabled: true
+12	  fixme:
+13	    enabled: true
+14	  rubocop:
+15	    enabled: true
+16	ratings:
+17	  paths:
+18	  - "**.rb"
+19	exclude_paths:
+20	- test/
