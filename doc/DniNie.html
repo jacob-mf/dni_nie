@@ -87,12 +87,12 @@
   <div class="discussion">
     
 <p>Los DNI&#39;s (Documento Nacional de Identidad) se componen de 8 dígitos y
-una letra de control Los DNI&#39;s (Document National Identity) are
-compound of 8 numbers and a control digit Los NIE&#39;s de extranjeros
-residentes en España tienen una letra (X, Y, Z), 7 números y dígito de
-control. NIE (foreigner number id.) are compound of a letter (X, Y, Z)
-first , then 7 digits and a control letter at the end. Gem name 	Require
-statement 	Main class or module ruby_parser 	require &#39;ruby_parser&#39;
+una letra de control | DNI&#39;s (Document National Identity) are compound
+of 8 numbers and a control digit Los NIE&#39;s de extranjeros residentes en
+España tienen una letra (X, Y, Z), 7 números y dígito de control. |
+NIE&#39;s (foreigner number id.) are compound of a letter (X, Y, Z) first ,
+then 7 digits and a control letter at the end. Gem name 	Require statement
+	Main class or module ruby_parser 	require &#39;ruby_parser&#39;
 	RubyParser dni_nie        require &#39;dni_nie&#39;        DniNie RESTO |
 MOD 	    0 	1 	2 	3 	4 	5 	6 	7 	8 	9 	10 	11 LETRA | LETTER	T 	R 	W 	A 	G
 	M 	Y 	F 	P 	D 	X 	B RESTO | MOD   	12 	13 	14 	15 	16 	17 	18 	19 	20 	21
@@ -106,6 +106,22 @@ href="http://www.interior.gob.es/web/servicios-al-ciudadano/dni/calculo-del-digi
 </div>
 <div class="tags">
   
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Luis Jacob Mariscal Fernández</p>
+</div>
+      
+    </li>
+  
+</ul>
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -116,7 +132,7 @@ href="http://www.interior.gob.es/web/servicios-al-ciudadano/dni/calculo-del-digi
       
         
         <div class='inline'>
-<p>0.3.3</p>
+<p>0.3.7</p>
 </div>
       
     </li>
@@ -189,7 +205,7 @@ value of 1st letter.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_random_dni-class_method" title="get_random_dni (class method)">.<strong>get_random_dni</strong>  &#x21d2; Object </a>
+      <a href="#get_random_dni-class_method" title="get_random_dni (class method)">.<strong>get_random_dni</strong>  &#x21d2; String </a>
     
 
     
@@ -206,7 +222,8 @@ value of 1st letter.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>genera dni aleatorio.</p>
+<p>Genera el documento nacional de identidad aleatorio | Creates a random
+valid Spanish national id document.</p>
 </div></span>
   
 </li>
@@ -215,7 +232,7 @@ value of 1st letter.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_random_nie-class_method" title="get_random_nie (class method)">.<strong>get_random_nie</strong>  &#x21d2; Object </a>
+      <a href="#get_random_nie-class_method" title="get_random_nie (class method)">.<strong>get_random_nie</strong>  &#x21d2; String </a>
     
 
     
@@ -232,7 +249,8 @@ value of 1st letter.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>genera nie aleatorio.</p>
+<p>Genera un número de identificación del extranjero NIE aleaotorio | Creates
+a random valid Spanish foreigner id document.</p>
 </div></span>
   
 </li>
@@ -267,7 +285,7 @@ value of 1st letter.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#validate_doc-class_method" title="validate_doc (class method)">.<strong>validate_doc</strong>(ci)  &#x21d2; Object </a>
+      <a href="#validate_doc-class_method" title="validate_doc (class method)">.<strong>validate_doc</strong>(ci)  &#x21d2; Boolean </a>
     
 
     
@@ -284,7 +302,8 @@ value of 1st letter.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>validar documento.</p>
+<p>Valida el documento de identificación dado  | Validate the entry id
+document.</p>
 </div></span>
   
 </li>
@@ -302,7 +321,7 @@ value of 1st letter.</p>
       <div class="method_details first">
   <h3 class="signature first" id="get_random_dni-class_method">
   
-    .<strong>get_random_dni</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>get_random_dni</strong>  &#x21d2; <tt>String</tt> 
   
 
   
@@ -315,13 +334,52 @@ value of 1st letter.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>genera dni aleatorio</p>
+<p>Genera el documento nacional de identidad aleatorio | Creates a random
+valid Spanish national id document.</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>ninguno</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>| none</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>DNI aleatorio | random DNI document.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -329,14 +387,14 @@ value of 1st letter.</p>
       <pre class="lines">
 
 
-85
-86
-87
-88
-89</pre>
+94
+95
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dni_nie.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'lib/dni_nie.rb', line 94</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_random_dni'>get_random_dni</span> <span class='comment'># genera dni aleatorio
 </span>    <span class='id identifier rubyid_dni'>dni</span> <span class='op'>=</span> <span class='id identifier rubyid_rand'>rand</span><span class='lparen'>(</span><span class='int'>0</span><span class='op'>..</span><span class='int'>89999999</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='comment'># límite en 89 millones, no se sabe de mayor a la fecha
@@ -351,7 +409,7 @@ value of 1st letter.</p>
       <div class="method_details ">
   <h3 class="signature " id="get_random_nie-class_method">
   
-    .<strong>get_random_nie</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>get_random_nie</strong>  &#x21d2; <tt>String</tt> 
   
 
   
@@ -364,13 +422,52 @@ value of 1st letter.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>genera nie aleatorio</p>
+<p>Genera un número de identificación del extranjero NIE aleaotorio | Creates
+a random valid Spanish foreigner id document.</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>ninguno</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>| none</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>NIE aleatorio | random NIE document.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -378,17 +475,17 @@ value of 1st letter.</p>
       <pre class="lines">
 
 
-91
-92
-93
-94
-95
-96
-97
-98</pre>
+103
+104
+105
+106
+107
+108
+109
+110</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dni_nie.rb', line 91</span>
+      <pre class="code"><span class="info file"># File 'lib/dni_nie.rb', line 103</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_random_nie'>get_random_nie</span> <span class='comment'># genera nie aleatorio
 </span>    <span class='comment'>#nie = LETRA[(rand(0..2))] ++ rand(0..9_999_999).to_s #parece que siempre asigna millones
@@ -433,7 +530,6 @@ value of 1st letter.</p>
       <pre class="lines">
 
 
-67
 68
 69
 70
@@ -442,14 +538,13 @@ value of 1st letter.</p>
 73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dni_nie.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/dni_nie.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_letra'>letra</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span> <span class='comment'># letra o digito  de control del DNI/NIE
 </span>    <span class='id identifier rubyid_num'>num</span> <span class='op'>=</span> <span class='id identifier rubyid_transform'>transform</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
     <span class='comment'>#doc = &#39;0&#39; + doc if doc.size == 6
-</span>    <span class='comment'>#a = 0
-</span>    
-    <span class='const'><span class='object_link'><a href="#CODIGO-constant" title="DniNie::CODIGO (constant)">CODIGO</a></span></span><span class='lbracket'>[</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>%</span> <span class='int'>23</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+</span>    <span class='comment'>#a = 0  
+</span>    <span class='const'><span class='object_link'><a href="#CODIGO-constant" title="DniNie::CODIGO (constant)">CODIGO</a></span></span><span class='lbracket'>[</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>%</span> <span class='int'>23</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -459,7 +554,7 @@ value of 1st letter.</p>
       <div class="method_details ">
   <h3 class="signature " id="validate_doc-class_method">
   
-    .<strong>validate_doc</strong>(ci)  &#x21d2; <tt>Object</tt> 
+    .<strong>validate_doc</strong>(ci)  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -472,13 +567,66 @@ value of 1st letter.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>validar documento</p>
+<p>Valida el documento de identificación dado  | Validate the entry id
+document.</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>verifica</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>si la entrada [Número|Cadena] es número de documento válido | check if
+entry [Number|String] is a valid document id.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>indica si válida la entrada | the entry validation return (true/flase).</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -486,21 +634,23 @@ value of 1st letter.</p>
       <pre class="lines">
 
 
-75
-76
-77
-78
 79
 80
 81
 82
-83</pre>
+83
+84
+85
+86
+87
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dni_nie.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'lib/dni_nie.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_validate_doc'>validate_doc</span><span class='lparen'>(</span><span class='id identifier rubyid_ci'>ci</span><span class='rparen'>)</span> <span class='comment'># validar documento
-</span>  <span class='id identifier rubyid_dig'>dig</span> <span class='op'>=</span> <span class='id identifier rubyid_ci'>ci</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
+</span>  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Entrada errónea, número de identificación debe ser una cadena | Wrong entry, must be a String</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_ci'>ci</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>String</span>
+  <span class='id identifier rubyid_dig'>dig</span> <span class='op'>=</span> <span class='id identifier rubyid_ci'>ci</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_ci'>ci</span> <span class='op'>=</span> <span class='id identifier rubyid_ci'>ci</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_ci'>ci</span> <span class='op'>=</span> <span class='id identifier rubyid_transform'>transform</span><span class='lparen'>(</span><span class='id identifier rubyid_ci'>ci</span><span class='rparen'>)</span>
   <span class='comment'>#p dig
@@ -518,7 +668,7 @@ value of 1st letter.</p>
 </div>
 
       <div id="footer">
-  Generated on Sun Mar 26 18:48:18 2017 by
+  Generated on Thu Jun  1 21:02:47 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.8 (ruby-2.3.2).
 </div>

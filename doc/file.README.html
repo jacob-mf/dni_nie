@@ -60,41 +60,40 @@
       <div id="content"><div id='filecontents'>
 <h1 id="label-DNI_NIE">DNI_NIE</h1>
 
-<p><a href="http://badge.fury.io/rb/ci_uy"><img
-src="https://badge.fury.io/rb/ci_uy.svg"></a> <a
-href="https://travis-ci.org/picandocodigo/ci_uy"><img
-src="https://travis-ci.org/picandocodigo/ci_uy.svg?branch=master"></a> <a
-href="https://codeclimate.com/github/picandocodigo/ci_uy"><img
-src="https://codeclimate.com/github/picandocodigo/ci_uy.png"></a></p>
+<p>Gema para validar/generar documentos de identidad de España | A gem to
+validate/generate Spanish Identity Documents  <a
+href="https://rubygems.org/gems/dni_nie">rubygems.org/gems/dni_nie</a>
+Inspirado y dedicado a Fernando Briano, por su proyecto <a
+href="http://picandocodigo.net/2013/validacion-de-la-cedula-de-identidad-uruguaya-en-ruby">picandocodigo.net/2013/validacion-de-la-cedula-de-identidad-uruguaya-en-ruby</a>/
+| Inspired and dedicated to Fernando Briano, and also to you and the
+Guadalinex users Dedicado también a ti y la comunidad de Guadalinex <a
+href="http://www.guadalinex.org/participa/foros">www.guadalinex.org/participa/foros</a>/</p>
 
-<p>A gem to validate Spanish Identity Documents  <a
-href="https://rubygems.org/gems/ci_uy">rubygems.org/gems/ci_uy</a></p>
-
-<p>Install:</p>
+<p>Instalación: | Install:</p>
 
 <pre class="code ruby"><code class="ruby">$ gem install dni_nie</code></pre>
 
-<p>Usage: <code>ruby fernando@hoth ~ $ rake console 1.9.3-p484 :001 &gt;
-CiUY.validate(&quot;1.111.111-1&quot;)  =&gt; true 1.9.3-p484 :002 &gt;
-CiUY.validation_digit(&quot;2222222&quot;)  =&gt; &quot;2&quot; 1.9.3-p484
-:003 &gt; CiUY.random  =&gt; &quot;13082956&quot; </code></p>
+<p>Uso | Usage: <code>ruby luis@pc ~ $ rake console irb(main):001:0&gt;
+DniNie.validar &quot;678989L&quot;  =&gt; false irb(main):002:0&gt;
+DniNie.letra &quot;678989&quot;  =&gt; &quot;Y&quot; irb(main):002:0&gt;
+DniNie.validate_doc &quot;678989Y&quot;  =&gt; &quot;true&quot; 
+irb(main):004:0&gt; DniNie.random_dni  =&gt; &quot;55428494N&quot; </code></p>
 
-<p>Once the gem is installed in your system, you can also use &#39;ci_uy&#39;
-from the command line:</p>
+<p>Una vez instalada la gema se puede usar directamente desde la línea de 
+comandos | Once the gem is installed in your system, you can also use
+&#39;dni_nie&#39; from the command line:</p>
 
-<pre class="code ruby"><code class="ruby">$ gem install ci_uy-0.0.6.gem
-Thanks for installing CiUY!
-Successfully installed ci_uy-0.0.6
+<pre class="code ruby"><code class="ruby">$ gem install dni_nie
+Thanks for installing DniNie!
+Successfully installed dni_nie
 1 gem installed
-Installing ri documentation for ci_uy-0.0.6...
-Building YARD (yri) index for ci_uy-0.0.6...
-Installing RDoc documentation for ci_uy-0.0.6...
-$ ci_uy random
-47063714
-$ ci_uy validate &quot;11111111&quot;
+
+$ dni_nie random_nie
+&quot;Z6767371V&quot;
+$ dni_nie validar &quot;678989Y&quot;
 true
-$ ci_uy validation_digit &quot;2.222.222&quot;
-2</code></pre>
+$ dni_nie control_letter 678989
+Y</code></pre>
 
 <h2 id="label-LICENSE">LICENSE</h2>
 
@@ -113,7 +112,7 @@ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</cod
 </div></div>
 
       <div id="footer">
-  Generated on Sun Mar 26 18:48:18 2017 by
+  Generated on Thu Jun  1 21:02:47 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.8 (ruby-2.3.2).
 </div>
