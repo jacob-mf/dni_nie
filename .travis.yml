@@ -1,15 +1,17 @@
+--- 
+before_script: 
+  - "gem build dni_nie.gemspec"
+  - "gem install dni_nie"
+install: "gem install minitest"
 language: ruby
-rvm:
-  - 2.1.10
-  - 1.9.3
-  - 2.2.6
-  - 2.3.3
-  - 2.4.0
+rvm: 
+  - 2.2
+  - "jruby - 2.1.10"
+  - "1.9.3"
+  - "2.2.6"
+  - "2.3.3"
+  - "2.4.0"
   - jruby-19mode
   - jruby-head
   - ruby-head
   - rbx
-install: gem install minitest
-before_script:
-  - gem build dni_nie.gemspec
-- gem install dni_nie
