@@ -1,0 +1,7 @@
+v0.3.7 tested ok
+ posted on rubygems.org, CI by Travis
+ YAMLint help with yam file on 17th July 2017
+v0.3.8  fixed for make more compatible
+ operator ++ string changed to simple +
+ 19th July 2017
+ 

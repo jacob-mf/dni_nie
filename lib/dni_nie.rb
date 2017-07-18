@@ -15,7 +15,7 @@
 # LETRA | LETTER	N 	J 	Z 	S 	Q 	V 	H 	L 	C 	K 	E
 # X → 0 ,Y → 1, Z → 2
 # más información | more info DNI-NIE http://www.interior.gob.es/web/servicios-al-ciudadano/dni/calculo-del-digito-de-control-del-nif-nie (Spanish)
-# @version 0.3.7
+# @version 0.3.8
 # @author Luis Jacob Mariscal Fernández
 
 module DniNie
@@ -102,7 +102,7 @@ end
 # @return [String] NIE aleatorio | random NIE document.
 def self.get_random_nie # genera nie aleatorio
     #nie = LETRA[(rand(0..2))] ++ rand(0..9_999_999).to_s #parece que siempre asigna millones
-    nie = LETRA[(rand(0..2))] ++ rand(0..9999999).to_s
+    nie = LETRA[(rand(0..2))] + rand(0..9999999).to_s # why ++ ?
     #p nie
     letra = letra(nie.dup)
     nie += letra
