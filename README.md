@@ -1,11 +1,14 @@
 # DNI_NIE
+[![Gem Version](https://badge.fury.io/rb/dni_nie.svg)](https://badge.fury.io/rb/dni_nie)
+[![Build Status](https://travis-ci.org/jacob-mf/dni_nie.svg?branch=master)](https://travis-ci.org/jacob-mf/dni-nie)
+[![Code Climate](https://codeclimate.com/github/jacob-mf/dni_nie/badges/gpa.svg)](https://codeclimate.com/github/jacob-mf/dni_nie)
 
 
 Gema para validar/generar documentos de identidad de España | A gem to validate/generate Spanish Identity Documents
   https://rubygems.org/gems/dni_nie
 Inspirado y dedicado a Fernando Briano, por su proyecto http://picandocodigo.net/2013/validacion-de-la-cedula-de-identidad-uruguaya-en-ruby/ |
 Inspired and dedicated to Fernando Briano, and also to you and the Guadalinex users
-Dedicado también a ti y la comunidad de Guadalinex http://www.guadalinex.org/participa/foros/
+Dedicado también a ti y la comunidad de Guadalinex http://www.guadalinex.org/participa/foros/  http://guadausers.tk/
 
 Instalación: | Install:
 
