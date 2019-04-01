@@ -2,7 +2,7 @@
 before_script: 
   - "gem build dni_nie.gemspec"
   - "gem install dni_nie"
-  - "apt-get install rake"
+  - "gem install rake -v 10.0.4"
 install: "gem install minitest"
 language: ruby
 rvm: 
