@@ -2,6 +2,7 @@
 before_script: 
   - "gem build dni_nie.gemspec"
   - "gem install dni_nie"
+  - "gem install rake"
 install: "gem install minitest"
 language: ruby
 rvm: 
