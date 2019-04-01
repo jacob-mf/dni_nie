@@ -3,6 +3,7 @@ require 'minitest/spec'
 require 'minitest/pride'
 require 'minitest/autorun'
 require 'dni_nie'
+# @author Luis Jacob Mariscal Fernández
 
 describe DniNie do   # test module DniNie
   it 'debe devolver la letra de control válida | should return a valid control digit' do
@@ -41,6 +42,8 @@ describe DniNie do   # test module DniNie
     doc = DniNie.get_random_dni
     assert DniNie.validate_doc(doc)
     doc = DniNie.get_random_nie
+    assert DniNie.validate_doc(doc)
+    doc = DniNie.num_id_extranjero
     assert DniNie.validate_doc(doc)
   end
 

@@ -15,7 +15,7 @@
 # LETRA | LETTER	N 	J 	Z 	S 	Q 	V 	H 	L 	C 	K 	E
 # X → 0 ,Y → 1, Z → 2
 # más información | more info DNI-NIE http://www.interior.gob.es/web/servicios-al-ciudadano/dni/calculo-del-digito-de-control-del-nif-nie (Spanish)
-# @version 0.3.8
+# @version 0.3.9
 # @author Luis Jacob Mariscal Fernández
 
 module DniNie
@@ -51,7 +51,7 @@ def self.transform(doc) # da formato conveniente a la entrada
  if doc.length > 8 
       raise ArgumentError, "Entrada errónea, número de identificación demasiado grande | Wrong identification number, too long"
  end
- doc.gsub!(/\D/, '') # expresión regular, parece que elimina lo que no sea dígitos
+ doc.gsub!(/\D/, '') # expresión regular, elimina lo que no sea dígitos
  #DONE check if sth included not a digit 
  while doc[0] == '0' and (doc.length > 1) # elimina 0s superfluos
   doc[0] = ''
@@ -123,6 +123,7 @@ end
    alias_method :dni, :get_random_dni
    alias_method :new_nie, :get_random_nie
    alias_method :generar_nie, :get_random_nie
-   alias_method :nie, :get_random_nie   
+   alias_method :nie, :get_random_nie
+   alias_method :num_id_extranjero, :get_random_nie   
  end
 end 

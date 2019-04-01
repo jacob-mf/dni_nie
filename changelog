@@ -5,4 +5,11 @@ v0.3.8  fixed for make more compatible
  operator ++ string changed to simple +
  rbx aborted from testing on Travis
  19th July 2017
- 
+v0.3.9 checking files
+ adding author info
+ new method syn, 
+ update License GPL3
+ new changelog in Spanish file
+  historia file
+
+Author: L. Jacob Mariscal Fernández 
