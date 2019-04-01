@@ -1,0 +1,15 @@
+versión(v) 0.3.7 funciona corretamente
+ publicado en rubygems.org, uso de integración continúa con Travis
+ YAMLint usado con archivo tipo yam desde 17 de Julio de 2017
+v0.3.8  dotando de mayopr compatibilidad al programa
+ operador ++ de cadena (string) cambiado a simple +
+ rbx elimnado de pruebas Travis
+ 19 de Julio de 2017
+v0.3.9 revisión de ficheros
+ añadidos detalles de autoría
+ nuevo método sinónimo, 
+ ctualizando licencia GPL3
+ nuevo archivo (éste) en español sobre histórico de versiones
+  historia
+
+Autor: L. Jacob Mariscal Fernández 
